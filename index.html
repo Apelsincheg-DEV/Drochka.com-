@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мой мини-сайт</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 15px; }
+    h1 { color: #333; }
+    p { line-height: 1.6; }
+    button { padding: 8px 16px; background: #007bff; color: white; border: none; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Привет, это мой мини-сайт!</h1>
+  <p>Здесь можно нажать кнопку, чтобы показать секретное сообщение.</p>
+  <button id="showBtn">Показать секрет</button>
+  <div id="secret" class="hidden" style="margin-top: 10px; color: #555;">
+    ✨ Ты нашёл секрет! 🎉
+  </div>
+
+  <script>
+    document.getElementById('showBtn').addEventListener('click', () => {
+      document.getElementById('secret').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
